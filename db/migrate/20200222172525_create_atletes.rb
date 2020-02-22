@@ -1,4 +1,4 @@
-class CreateAthletes < ActiveRecord::Migration[5.2]
+class CreateAtletes < ActiveRecord::Migration[5.2]
   def change
     create_table :atletes do |t|
       t.string :account_type
