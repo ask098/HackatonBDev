@@ -1,0 +1,52 @@
+<div class="container">
+
+
+
+<%= form_for [@athlete] do |form | %>
+
+
+    <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder:"name" %>
+    </div> 
+
+
+    <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age, placeholder:"age" %>
+    </div> 
+
+
+    <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, placeholder:"gender" %>
+    
+    </div> 
+
+
+    <div class="field">
+    <%= form.label :sport_name %>
+    <%= form.text_field :sport_name, placeholder:"sport_name" %>
+    </div> 
+
+
+    <div class="field">
+    <%= form.label :nacionality %>
+    <%= form.text_field :nacionality, placeholder:"nacionality" %>
+    </div> 
+
+
+    <div class="field">
+    <%= form.label :Biography %>
+    <%= form.text_field :bio, placeholder:"bio" %>
+    </div> 
+
+
+
+
+    <div class="actions">
+    <%= form.submit %>
+    </div>
+<%end%>
+
+</div>

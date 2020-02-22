@@ -1,6 +1,91 @@
-<% @athletes.each do |project| %>
-<%= athletes.name %>
-<%= athletes.nationality %>
-<%= athletes.sport_name %>
-<% end %>
-hola. 
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">HackatonBDev</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Players</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <br>
+        <div id="myBtnContainer">
+          <button class="btn btn-primary active" data-filter=""> Show all</button>
+        <% #@athletes.sport_Names do |sport| %>
+        
+         <% #end %>
+        </div>
+        <br>
+        <div>
+
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a ">
+
+        </div>
+        <br>
+
+        <div class="row " >
+          <div class="filter-gallery">
+           <% @athletes.each do |athlete| %>
+           <div class="col-lg-3 col-md-4 mb-4 item" data-category="<%=athlete.sport_name%>">
+            <div class="card h-100">
+              <a >
+              <img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/327/327166/an-athlete-who-is-performing-well-thanks-to-vietnams.jpg" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">
+                <a><%= link_to athlete.name, athlete %></a>
+                
+                </h4>
+                <h5><%=athlete.age%></h5>
+                <h4><%=athlete.gender%></h4>
+  
+                <p class="card-text"><%=athlete.bio%></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">  <%=athlete.nacionality%></small>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
