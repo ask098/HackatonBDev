@@ -118,12 +118,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
-<<<<<<< HEAD
-    nokogiri (1.10.8-x64-mingw32)
-      mini_portile2 (~> 2.4.0)
-=======
     orm_adapter (0.5.0)
->>>>>>> 1e56152f5fdca14aaac579137e3d9143a63d5c2c
     popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.2)
