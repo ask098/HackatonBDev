@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_22_210637) do
+ActiveRecord::Schema.define(version: 2020_02_23_000458) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -64,16 +64,8 @@ ActiveRecord::Schema.define(version: 2020_02_22_210637) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "experiences", force: :cascade do |t|
-    t.string "name_event"
-    t.string "ranking"
-    t.string "scoring"
-    t.date "date_event"
-    t.string "country"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "experiences" because of following StandardError
+#   Unknown type 'atletes' for column 'belongs_to'
 
   create_table "sports", force: :cascade do |t|
     t.string "sport_Names"

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :home
   resources :profiles
   resources :companies
-  resources :athletes
+  resources :athletes do
+    :experiences
+  end
   root 'home#index'
 
 end

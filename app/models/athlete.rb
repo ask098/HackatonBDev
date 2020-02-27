@@ -1,5 +1,5 @@
 class Athlete < ApplicationRecord
-    # has_many :contracts
+     has_many :experiences
     # belongs_to :user
   
   end      
